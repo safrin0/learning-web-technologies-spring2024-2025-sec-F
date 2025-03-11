@@ -5,16 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+  table,tr,td{
+      border: 1px solid black;
+  }
+</style>
 <body>
-    <h2>Input Info </h2>
-
-    <form action="/action_page.php">
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br>
-      <label for="pwd">Password:</label><br>
-      <input type="password" id="pwd" name="pwd"><br><br>
-      <input type="checkbox"> Remember me<br>
-      <input type="submit" value="Submit">
+  <Form>
+       <h2>Your Information </h2>
+    <table>
+      <tr>
+      <td><label for="Firstname">FirstName:</label></td>
+      <td><input type="text" id="Lastname" name="Firstname"  value=""></td>
+      </tr>
+      <tr>
+        <td><label for= "Lastname">LastName:</label></td>
+        <td><input type="text" id="Lastname" name="Lastname"  value=""></td>
+      </tr>
+      <tr>
+        <td>
+          <label for = "id">ID:</label>
+        </td>
+      </tr>
+      <tr>
+      <td><label for="pwd">Password:</label></td>
+     <td> <input type="password" id="pwd" name="pwd"></td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </td>
+    </tr>
+    <tr>
+      <td><label for="dob">Date of Birth:</label></td>
+      <td><input type="date" id="dob" name="dob"></td>
+      </tr>
+      <tr>
+        <td>Department </td>
+        <td><label for="Department"></label>
+            <select name="Department" id="Department">
+              <option value="CSE">CSE</option>
+              <option value="EEE">EEE</option>
+              <option value="Marketing">Marketing</option>
+            </select></td>
+    </tr>
+      <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input type="email" id="email" name="email"></td>
+      </tr>
+      <tr>
+      <td><label for="phone">Phone:</label></td>
+      <td><input type="tel" id="phone" name="phone"></td>
+      </tr>
+      <tr>
+      <td><label for="Address">Address:</label></td>
+      <td><textarea id="Address" name="Address" rows="4" cols="50"></textarea></td>
+      </tr>
+    <tr>
+      <td><label for="Hobbies">Hobbies:</label></td>
+      <td>
+          <input type="checkbox" id="Hobies1" name="Hobbies" value="Gaming">
+          <label for="Hobbiest1">Gaming</label>
+          <input type="checkbox" id="Hobbies2" name="Hobbies" value="Painting">
+          <label for="Hobbies2">Painting</label>
+          <input type="checkbox" id="Hobbies3" name="Hobbies" value="Cooking">
+          <label for="Hobbies3">Cooking</label>
+      </td>
+  </tr>
+  <tr>
+    <td><label for="file">Upload Image:</label></td>
+    <td><input type="file" id="file" name="file"></td>
+    </tr>
+  </tr>
+      <tr>
+        <td><input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        </td>
+      </tr>
+      </table>
     </form>
 </body>
 </html>
