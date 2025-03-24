@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateDate() {
+            let day = document.getElementById("day").value;
+            let month = document.getElementById("month").value;
+            let year = document.getElementById("year").value;
+            if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2016) {
+                alert("Invalid Date");
+                return false;
+            }
+            alert("Valid Date");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateDate()">
+        
+        <label>Date of Birth</label>
+        <hr>
+        <input type="number" id="day" placeholder="DD">/
+        <input type="number" id="month" placeholder="MM">/
+        <input type="number" id="year" placeholder="YYYY">
+        <hr>
+      <br>  <button type="submit">Submit</button></br>
+      
+    </form>
+</body>
+</html>
