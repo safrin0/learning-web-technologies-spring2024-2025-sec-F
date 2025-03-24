@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Validation</title>
+    <script>
+        function validateCheckbox() {
+            let checkboxes = document.querySelectorAll("input[type='checkbox']");
+            let checked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+            if (!checked) {
+                alert("At least one checkbox must be selected");
+                return false;
+            }
+            alert("Valid Selection");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateCheckbox()">
+        <input type="checkbox" id="degree1" name="degree" value="SSC">
+        <label for="degree1">SSC</label>
+        <input type="checkbox" id="degree2" name="degree" value="HSC">
+        <label for="degree2">HSC</label>
+        <input type="checkbox" id="degree3" name="degree" value="BSc">
+        <label for="degree3">BSc</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
