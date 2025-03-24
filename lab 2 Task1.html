@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateName()">
+        <label>Name</label>
+       <br> <input type="text" id="name"></br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validateName() {
+            let name = document.getElementById("name").value;
+            let words = name.trim().split(/\s+/);
+            if (name === "" || words.length < 2 || !/^[a-zA-Z][a-zA-Z.-\s]*$/.test(name)) {
+                alert("Invalid Name");
+                return false;
+            }
+            alert("Valid Name");
+            return true;
+        }
+    </script>
+</body>
+</html>
