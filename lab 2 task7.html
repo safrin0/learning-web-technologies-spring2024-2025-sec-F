@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User ID & Picture Validation</title>
+    <script>
+        function validateUser() {
+            let userId = document.getElementById("userId").value;
+            let picture = document.getElementById("picture").value;
+            if (userId === "" || isNaN(userId) || userId <= 0) {
+                alert("Invalid User ID: Must be a positive number");
+                return false;
+            }
+            if (picture === "") {
+                alert("Please upload a picture");
+                return false;
+            }
+            alert("Valid User Info");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateUser()">
+        <label>Profile Picture</label><br>
+        <label>User Id</label>
+        <input type="text" id="userId" placeholder="User ID"><br>
+        <label> Picture</label>
+        <input type="file" id="picture">
+        <hr>
+        <button type="submit">Submit</button>
+    </form> 
+</body>
+</html>

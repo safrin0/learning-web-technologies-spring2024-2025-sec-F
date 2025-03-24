@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateDropdown() {
+            let option = document.getElementById("dropdown").value;
+            if (option === "") {
+                alert("Please select an option");
+                return false;
+            }
+            alert("Valid Selection");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateDropdown()">
+        <label>Blood Group</label> <select id="dropdown">
+            <option value="">Select an option</option>
+            <option value="option1">O+</option>
+            <option value="option2">B+</option>
+            <option value="option3">A+</option>
+            <option value="option4">AB+</option>
+            <option value="option5">O-</option>
+            <option value="option6">B-</option>
+        </select>
+        <hr>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
