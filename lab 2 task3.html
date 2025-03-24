@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender</title>
+    <script>
+        function validateGender() {
+            let genders = document.querySelectorAll('input[name="gender"]');
+            let selected = Array.from(genders).some(gender => gender.checked);
+            if (!selected) {
+                alert("Select a Gender First");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <body>
+        <form onsubmit="return validateGender()">
+            <label>Gender</label><br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other <br>
+            <button type="submit">Submit</button>
+        </form>
+</body>
+</html>
